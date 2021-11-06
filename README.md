@@ -1,4 +1,4 @@
-# macaboo
+# macaboo :ghost:
 An Object-Oriented program to rule all distillation columns! based on McCabe-Thiele method
 
 ## Introduction
