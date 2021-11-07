@@ -1,4 +1,7 @@
 # macaboo :ghost:
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/64d78da9c57445619e886f8855b52c8c)](https://app.codacy.com/gh/314arhaam/macaboo?utm_source=github.com&utm_medium=referral&utm_content=314arhaam/macaboo&utm_campaign=Badge_Grade_Settings)
+
 An Object-Oriented program to rule all distillation columns!
 
 ## Introduction
