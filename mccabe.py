@@ -1,6 +1,6 @@
 import os
 import numpy as np
-from scipy.integrate import quad, trapz
+from scipy.integrate import trapz
 from scipy.optimize import fsolve
 import matplotlib.pyplot as plt
 from scipy.interpolate import interp1d
@@ -145,6 +145,7 @@ class distillColumn:
         return 0
 
 if __name__ == "__main__":
+    # default example
     b = distillColumn(1000, 0.15, 0.65, 0.9, 0.5, lambda x, alpha=2.8: alpha * x / (1 + (alpha - 1) * x), 1)
     b.run()
     plt.show()
