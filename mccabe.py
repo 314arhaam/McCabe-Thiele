@@ -46,7 +46,7 @@ class distillColumn:
         #
         self._rmin()
         self._azeocheck()
-        print(self)
+        #print(self)
     def __repr__(self):
         r = f"""
         {self.system_name}
@@ -118,7 +118,7 @@ class distillColumn:
             else:
                 plt.plot([X, X_], [Y, Y], "k", lw=0.5)
             n_trays += 1
-            #plt.annotate(f"{n_trays}", (0.01 + X, (F(X)+Y)/2))
+            plt.annotate(f"{n_trays}", (0.01 + X, (F(X)+Y)/2))
             X = X_
         self.n_trays = n_trays
         if n_trays < 100:
