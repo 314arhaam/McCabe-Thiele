@@ -49,12 +49,13 @@ o8o        o888o `Y8bod8P'  `Y8bood8P'  `Y888""8o  `Y8bod8P' `Y8bod8P'
         xD          0.900
         xF          0.650
 
-        NO. trays   7
+        NO. trays   6
         min RR      0.597
         min. Tray   3.856
 
         ave. alpha  2.77
         azeotrope   -1.000
+
 """
 ```
 
