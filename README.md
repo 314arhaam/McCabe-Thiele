@@ -59,5 +59,5 @@ o8o        o888o `Y8bod8P'  `Y8bood8P'  `Y888""8o  `Y8bod8P' `Y8bod8P'
 ```
 
 <p align="center">
-  <img src="https://github.com/314arhaam/macaboo/blob/main/McCabe.png" width="500" title="plot">
+  <img src="https://github.com/314arhaam/macaboo/blob/main/McCabe-Thiele.png" width="500" title="plot">
 </p>
