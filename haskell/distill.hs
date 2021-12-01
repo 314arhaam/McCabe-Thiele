@@ -1,4 +1,15 @@
+-- ghc --make distill.hs
+-- distill.exe (windows)
+
 -- McCabe-Thiele method q = 1
+
+{- 
+operating line as a function of
+    xb  buttoms liquid mole fraction
+    xd  distillate liquid mole fraction
+    zf  feed concentration
+    r   reflux ratio
+-}
 operationLine :: Float -> Float -> Float -> Float -> (Float -> Float)
 operationLine xb xd zf r = \x -> case () of
                                _| x >  xm -> a1 * x + b1 -- stripping
@@ -10,7 +21,12 @@ operationLine xb xd zf r = \x -> case () of
                                     a2 = (a1 * xm + b1 - xb) / (xm - xb)
                                     b2 = xb - a2 * xb
 
-
+{-
+solves distillation column for
+    x           recursive parameter, mole fraction
+    oLine       combined operating lines as a bijective function
+    invEquil    inversed of the equilibrium function
+-}
 distil :: Float -> (Float -> Float) -> (Float -> Float) -> [Float]
 distil x oLine invEquil | x_ >  oLine x_ = [x]
                         | x_ <= oLine x_ = x : distil (oLine x_) oLine invEquil
