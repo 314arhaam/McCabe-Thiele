@@ -5,7 +5,10 @@ from scipy.optimize import fsolve
 import matplotlib.pyplot as plt
 from scipy.interpolate import interp1d
 
+
+
 os.system("cls")
+
 print(r"""
 ooo        ooooo             .oooooo.              .o8                 
 `88.       .888'            d8P'  `Y8b            "888                 
