@@ -1,5 +1,4 @@
 # macaboo
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/8eac61e7edde444ba1855ffef2ecbc50)](https://www.codacy.com/gh/314arhaam/macaboo/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=314arhaam/macaboo&amp;utm_campaign=Badge_Grade)  
 Functional & Object-Oriented programs to rule all distillation columns!
 
 ## Introduction
