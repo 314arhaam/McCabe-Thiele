@@ -1,4 +1,4 @@
-# macaboo
+# McCabe-Thiele
 Functional & Object-Oriented programs to rule all distillation columns!
 
 ## Introduction
