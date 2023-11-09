@@ -5,6 +5,7 @@ Functional & Object-Oriented programs to rule all distillation columns!
 [McCabe-Thiele method](https://en.wikipedia.org/wiki/McCabe%E2%80%93Thiele_method), is a simple method for designing distillation columns. It is in the syllabus of Unit Operations I course, in Chemical Engineering.
 
 ## Example
+### Script
 ```python
 import mccabe
 
@@ -24,6 +25,7 @@ col = distillColumn(**kwargs)
 col.run()
 plt.show()
 ```
+### Result
 ```
 """
 
