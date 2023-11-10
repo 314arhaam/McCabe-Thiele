@@ -1,8 +1,8 @@
 import os
 import numpy as np
+import matplotlib.pyplot as plt
 from scipy.integrate import trapz
 from scipy.optimize import fsolve
-import matplotlib.pyplot as plt
 from scipy.interpolate import interp1d
 
 
