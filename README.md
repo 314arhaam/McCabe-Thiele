@@ -2,7 +2,12 @@
 Functional & Object-Oriented programs to rule all distillation columns.
 
 ## Introduction
-[McCabe-Thiele method](https://en.wikipedia.org/wiki/McCabe%E2%80%93Thiele_method), is a simple method for designing distillation columns.
+The [McCabe-Thiele method](https://en.wikipedia.org/wiki/McCabe%E2%80%93Thiele_method) is a technique that is commonly employed in the field of chemical engineering to model the separation of two substances by a distillation column. It uses the fact that the composition at each theoretical tray is completely determined by the mole fraction of one of the two components. This method is based on the assumptions that the distillation column is isobaric - i.e the pressure remains constant - and that the flow rates of liquid and vapor do not change throughout the column (i.e., constant molar overflow). The assumption of constant molar overflow requires that: 
+1. The heat needed to vaporize a certain amount of liquid of the feed components are equal,
+2. For every mole of liquid vaporized, a mole of vapor is condensed, and
+3. Heat effects such as heat needed to dissolve the substance(s) are negligible.  
+
+The method was first published by Warren L. McCabe and Ernest Thiele in 1925, both of whom were working at the Massachusetts Institute of Technology (MIT) at the time.
 
 ## Example
 ### Script
