@@ -1,4 +1,4 @@
-# McCabe-Thiele
+# $\textbf{McCabe-Thiele}$
 Functional & Object-Oriented programs to rule all distillation columns.  
   
 ![The most beautiful mccabe code!](https://github.com/314arhaam/McCabe-Thiele/blob/main/gallery/haskell-mccabe.png)
