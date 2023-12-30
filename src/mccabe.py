@@ -84,14 +84,28 @@ class distillColumn:
         return r
     
     def _azeocheck(self):
-        self.x_azeo = -1
+        """_azeocheck check if there are any azeotropes in the solution.
+        distillation process stops at the azeotrope point, if exists.
+        """
+        self.x_azeo = -1    # initial value
         fun = lambda x: self.f(x) - x
-        x = fsolve(fun, 0.5)[0]
+        x = fsolve(fun, 0.5)[0] # solve: f(x) = x where f(x) is the equilibrim
         if (0 < x < 1) and (x > 1e-2 or x < 1-1e-2):
             self.x_azeo = x
-        return 0
+        return None
     
-    def upper_line(self, x):
+    def upper_line(self, x: float):
+        """upper_line the function for operating line at the upper section of
+        the column.
+        R/(R+1)*x + x_d/(R+1)
+        latex: y = \frac{R}{R+1}x + \frac{x_{d}}{R+1}
+
+        Args:
+            x (float): input parameter, liquid mole fraction
+
+        Returns:
+            _type_: vapour mole fraction
+        """
         return self.R / (self.R+1) * x + self.x_D / (self.R+1)
     
     def lower_line(self, x):
