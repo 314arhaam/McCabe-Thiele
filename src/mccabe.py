@@ -161,12 +161,22 @@ class distillColumn:
         else:
             return -1
         
-    def fensk(self, N=100):
+    def fensk(self, N: int = 100):
+        """fensk Fensk equation: an estimate of the minimum required trays for
+        a given system; A rule of thumb.
+
+        Args:
+            N (int, optional): number of points in the calculation. 
+            Defaults to 100.
+
+        Returns:
+            _type_: minimum number of the trays.
+        """
         alphaFun = lambda x: (self.f(x)/x)/((1-self.f(x))/(1-x))
         x = np.linspace(1e-6, 1, N, endpoint=False)
         y = alphaFun(x)
         a = trapz(y, x)
-        self.average_alpha = a
+        self.average_alpha = a  # average volatility of the solution
         n = np.log(self.x_D/(1 - self.x_D) * (1 - self.x_B)/self.x_B) / np.log(a)
         return n
     
