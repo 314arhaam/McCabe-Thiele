@@ -10,14 +10,14 @@ from typing import List, Tuple, Callable
 os.system("cls")
 
 print(r"""
-ooo        ooooo             .oooooo.              .o8                 
-`88.       .888'            d8P'  `Y8b            "888                 
- 888b     d'888   .ooooo.  888           .oooo.    888oooo.   .ooooo.  
- 8 Y88. .P  888  d88' `"Y8 888          `P  )88b   d88' `88b d88' `88b 
- 8  `888'   888  888       888           .oP"888   888   888 888ooo888 
- 8    Y     888  888   .o8 `88b    ooo  d8(  888   888   888 888    .o 
-o8o        o888o `Y8bod8P'  `Y8bood8P'  `Y888""8o  `Y8bod8P' `Y8bod8P' 
-                                                                       
+    ooo        ooooo             .oooooo.              .o8                 
+    `88.       .888'            d8P'  `Y8b            "888                 
+    888b     d'888   .ooooo.  888           .oooo.    888oooo.   .ooooo.  
+    8 Y88. .P  888  d88' `"Y8 888          `P  )88b   d88' `88b d88' `88b 
+    8  `888'   888  888       888           .oP"888   888   888 888ooo888 
+    8    Y     888  888   .o8 `88b    ooo  d8(  888   888   888 888    .o 
+    o8o        o888o `Y8bod8P'  `Y8bood8P'  `Y888""8o  `Y8bod8P' `Y8bod8P' 
+                                                                        
                                                                        
                                                                        
 """)
