@@ -25,6 +25,18 @@ o8o        o888o `Y8bod8P'  `Y8bood8P'  `Y888""8o  `Y8bod8P' `Y8bod8P'
 class distillColumn:
     def __init__(self, feed: float, xb: float, xf: float, xd: float, q: float,
                  fxy: Callable, r: float, name: str = ""):
+        """__init__ _summary_
+
+        Args:
+            feed (float): flowrate of the feed stream
+            xb (float): molar fraction of the liquid at the buttoms
+            xf (float): molar fraction of the liquid in the feed stream
+            xd (float): molar fraction of the liquid at the distilate
+            q (float): thermodynamical state of the feed
+            fxy (Callable): xy equilibrium
+            r (float): reflux ratio
+            name (str, optional): name of the object/tower. Defaults to "".
+        """
         self.system_name = name
         #
         self.feed = feed
