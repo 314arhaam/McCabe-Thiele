@@ -144,6 +144,8 @@ class distillColumn:
         return 0
     
     def run(self):
+        # compute the inverse of the linear function
+        # y = ax + b ; x = (y - b)/a
         linv = lambda fun: lambda y: (y - fun(0))/(fun(1) - fun(0))
         self.plot()
         X = self.x_B
@@ -163,6 +165,8 @@ class distillColumn:
             plt.annotate(f"{n_trays}", (0.01 + X, (F(X)+Y)/2))
             X = X_
         self.n_trays = n_trays
+        # control if there are infinite number of trays calculated which means
+        # an azeotrope exists.
         if n_trays < 100:
             return 0
         else:
