@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.integrate import trapz
 from scipy.optimize import fsolve
-from scipy.interpolate import interp1d
+from typing import List, Tuple, Callable
 
 
 
@@ -23,7 +23,8 @@ o8o        o888o `Y8bod8P'  `Y8bood8P'  `Y888""8o  `Y8bod8P' `Y8bod8P'
 """)
 
 class distillColumn:
-    def __init__(self, feed, xb, xf, xd, q, fxy, r, name=""):
+    def __init__(self, feed: float, xb: float, xf: float, xd: float, q: float,
+                 fxy: Callable, r: float, name: str = ""):
         self.system_name = name
         #
         self.feed = feed
@@ -44,12 +45,11 @@ class distillColumn:
         self.L_lower = self.B / (self._a - 1)
         self.V_lower = self.L_lower - self.B
         #
-        self.n_trays = 0
-        self.Rmin = 0
+        self.n_trays = 0    # initializing the tray numbers
+        self.Rmin = 0       # initializing the reflux ratio
         #
-        self._rmin()
-        self._azeocheck()
-        #print(self)
+        self._rmin()        # compute the minimum reflux ratio
+        self._azeocheck()   # check if there are any azeotropes
     
     def __repr__(self):
         r = f"""
