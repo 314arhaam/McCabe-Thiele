@@ -50,6 +50,7 @@ class distillColumn:
         self._rmin()
         self._azeocheck()
         #print(self)
+    
     def __repr__(self):
         r = f"""
         {self.system_name}
@@ -69,6 +70,7 @@ class distillColumn:
         azeotrope   {self.x_azeo:.3f}
         """
         return r
+    
     def _azeocheck(self):
         self.x_azeo = -1
         fun = lambda x: self.f(x) - x
@@ -76,10 +78,13 @@ class distillColumn:
         if (0 < x < 1) and (x > 1e-2 or x < 1-1e-2):
             self.x_azeo = x
         return 0
+    
     def upper_line(self, x):
         return self.R / (self.R+1) * x + self.x_D / (self.R+1)
+    
     def lower_line(self, x):
         return self._a * x + self._b
+    
     def plot(self):
         N = 50
         x_lower = np.linspace(self.x_B, self.x_mid, N)
@@ -104,6 +109,7 @@ class distillColumn:
         plt.xlim(0, 1)
         plt.ylim(0, 1)
         return 0
+    
     def run(self):
         linv = lambda fun: lambda y: (y - fun(0))/(fun(1) - fun(0))
         self.plot()
@@ -128,6 +134,7 @@ class distillColumn:
             return 0
         else:
             return -1
+        
     def fensk(self, N=100):
         alphaFun = lambda x: (self.f(x)/x)/((1-self.f(x))/(1-x))
         x = np.linspace(1e-6, 1, N, endpoint=False)
@@ -136,6 +143,7 @@ class distillColumn:
         self.average_alpha = a
         n = np.log(self.x_D/(1 - self.x_D) * (1 - self.x_B)/self.x_B) / np.log(a)
         return n
+    
     def _rmin(self):
         if self.q == 1:
             x = self.x_F
