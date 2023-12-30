@@ -193,7 +193,7 @@ class distillColumn:
             _type_: minimum number of the trays.
         """
         alphaFun = lambda x: (self.f(x)/x)/((1-self.f(x))/(1-x))
-        x = np.linspace(1e-6, 1, N, endpoint=False)
+        x = np.linspace(1e-6, 1, N, endpoint = False)
         y = alphaFun(x)
         a = trapz(y, x)
         self.average_alpha = a  # average volatility of the solution
