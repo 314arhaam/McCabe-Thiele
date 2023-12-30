@@ -125,7 +125,7 @@ class distillColumn:
         x_lower = np.linspace(self.x_B, self.x_mid, N)
         x_upper = np.linspace(self.x_mid, self.x_D, N)
         x = np.linspace(0, 1, N)
-        fig = plt.figure("McCabe-Thiele", figsize=(7, 7))
+        _ = plt.figure("McCabe-Thiele", figsize = (7, 7))
         # plot title
         plt.title(self.system_name)
         # plotting
@@ -134,9 +134,9 @@ class distillColumn:
         plt.plot([self.x_F, self.x_mid], 
                  [self.x_F, self.upper_line(self.x_mid)], 
                  "k")                                       # q-line
-        plt.legend(["Stripping", "Rectifying", "q-line"], fontsize=8)
-        plt.plot(x, self.f(x), "k", lw=1)                   # equilibrium
-        plt.plot(x, x, "k--", lw=1)                         # y = x
+        plt.legend(["Stripping", "Rectifying", "q-line"], fontsize = 8)
+        plt.plot(x, self.f(x), "k", lw = 1)                 # equilibrium
+        plt.plot(x, x, "k--", lw = 1)                       # y = x
         plt.plot([self.x_B, self.x_B], [0, self.x_B], "b--")
         plt.plot([self.x_D, self.x_D], [0, self.x_D], "b--")
         plt.plot([self.x_F, self.x_F], [0, self.x_F], "b--")
