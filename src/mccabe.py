@@ -112,26 +112,33 @@ class distillColumn:
         return self._a * x + self._b
     
     def plot(self):
-        N = 50
+        N = 50 # controls the resolution
         x_lower = np.linspace(self.x_B, self.x_mid, N)
         x_upper = np.linspace(self.x_mid, self.x_D, N)
         x = np.linspace(0, 1, N)
         fig = plt.figure("McCabe-Thiele", figsize=(7, 7))
+        # plot title
         plt.title(self.system_name)
-        plt.plot(x_lower, self.lower_line(x_lower), "r")
-        plt.plot(x_upper, self.upper_line(x_upper), "m")
-        plt.plot([self.x_F, self.x_mid], [self.x_F, self.upper_line(self.x_mid)], "k")
+        # plotting
+        plt.plot(x_lower, self.lower_line(x_lower), "r")    # stripping section
+        plt.plot(x_upper, self.upper_line(x_upper), "m")    # rectifying section
+        plt.plot([self.x_F, self.x_mid], 
+                 [self.x_F, self.upper_line(self.x_mid)], 
+                 "k")                                       # q-line
         plt.legend(["Stripping", "Rectifying", "q-line"], fontsize=8)
-        plt.plot(x, self.f(x), "k", lw=1)
-        plt.plot(x, x, "k--", lw=1)
+        plt.plot(x, self.f(x), "k", lw=1)                   # equilibrium
+        plt.plot(x, x, "k--", lw=1)                         # y = x
         plt.plot([self.x_B, self.x_B], [0, self.x_B], "b--")
         plt.plot([self.x_D, self.x_D], [0, self.x_D], "b--")
         plt.plot([self.x_F, self.x_F], [0, self.x_F], "b--")
+        # axis ticks and labels
         plt.xticks(np.linspace(0, 1, 11))
         plt.yticks(np.linspace(0, 1, 11))
         plt.xlabel("liquid mole-fraction")
         plt.ylabel("vapour mole-fraction")
+        # axis type
         plt.axis("square")
+        # range of the x, y parameters; between 0 and 1
         plt.xlim(0, 1)
         plt.ylim(0, 1)
         return 0
