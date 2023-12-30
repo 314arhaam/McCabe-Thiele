@@ -59,7 +59,7 @@ class distillColumn:
         #
         self.n_trays = 0    # initializing the tray numbers
         self.Rmin = 0       # initializing the reflux ratio
-        #
+        # almost private methods
         self._rmin()        # compute the minimum reflux ratio
         self._azeocheck()   # check if there are any azeotropes
     
