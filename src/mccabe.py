@@ -104,11 +104,20 @@ class distillColumn:
             x (float): input parameter, liquid mole fraction
 
         Returns:
-            _type_: vapour mole fraction
+            _type_: vapour mole fraction (y)
         """
         return self.R / (self.R+1) * x + self.x_D / (self.R+1)
     
-    def lower_line(self, x):
+    def lower_line(self, x: float):
+        """lower_line the function for operating line at the lower section of
+        the column.
+
+        Args:
+            x (float): input parameter, liquid mole fraction
+
+        Returns:
+            _type_: vapour mole fraction (y)
+        """
         return self._a * x + self._b
     
     def plot(self):
@@ -192,6 +201,8 @@ class distillColumn:
         return n
     
     def _rmin(self):
+        """_rmin compute the minimum reflux ratio
+        """
         if self.q == 1:
             x = self.x_F
         else:
@@ -200,7 +211,7 @@ class distillColumn:
         y = self.f(x)
         k = (y - self.x_D) / (x - self.x_D)
         self.Rmin = k / (1 - k)
-        return 0
+        return None
 
 if __name__ == "__main__":
     # default example
